@@ -4,29 +4,18 @@ using UnityEngine;
 
 public class Toggler : MonoBehaviour
 {
-
-    int click = 0;
-   public GameObject toggle;
-      
-
+       
+    public GameObject toggle;
+   
     public void clicks()
     {
-
-        if (click % 2 == 0)
+        if (toggle.activeInHierarchy)
         {
-            toggle.SetActive(true);
-            
-        }
-
-        if (click % 2 == 1)
-        {
-            
             toggle.SetActive(false);
         }
-
-        click += 1;
-       
+       else if (!toggle.activeInHierarchy)
+        {
+            toggle.SetActive(true);
+        }
     }
-
-
 }

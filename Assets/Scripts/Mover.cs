@@ -4,7 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
-
+/*! \class Test class.h "inc/class.h"
+ *  \brief This is a test class.
+ *
+ * Some details about the Test class.
+ */
+//< Summary > A brief description of the whole
+//< summary > Description </ summary >
 public class Mover : MonoBehaviour
 {
     private InputDevice _device;
@@ -14,9 +20,10 @@ public class Mover : MonoBehaviour
 
     private void Start()
     {
-        _device = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        _device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
         _character = GetComponent<CharacterController>();
         _camera = GetComponent<XRRig>().cameraGameObject;
+        
     }
 
 
@@ -31,5 +38,9 @@ public class Mover : MonoBehaviour
         var newDirection = Quaternion.Euler(lookDirection) * inputDirection;
 
         _character.Move(newDirection* Time.deltaTime * 1f);
+
+
+
+        
     }
 }
