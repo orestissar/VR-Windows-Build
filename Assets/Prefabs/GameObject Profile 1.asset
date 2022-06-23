@@ -34,7 +34,7 @@ MonoBehaviour:
     value: 0.4
   toneCurveShoulderStrength:
     overrideState: 1
-    value: 1
+    value: 0
   toneCurveShoulderLength:
     overrideState: 0
     value: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 1
+    overrideState: 0
     value: -1
   tint:
     overrideState: 0
@@ -73,8 +73,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   contrast:
-    overrideState: 0
-    value: 5
+    overrideState: 1
+    value: 10
   mixerRedOutRedIn:
     overrideState: 0
     value: 100

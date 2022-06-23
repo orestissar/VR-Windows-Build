@@ -14,6 +14,7 @@ public class MnKrotate : MonoBehaviour
 
     void Start()
     {
+        
         originalPosition = transform.position;
         originalRotation = transform.rotation;
     }
@@ -72,21 +73,17 @@ public class MnKrotate : MonoBehaviour
             transform.rotation = originalRotation;
         }
 
-
-
     }
       
     
     private void Rotate()
     {
 
-
         float Y = Input.GetAxis("Mouse Y") * rotationSpeed;
         float X = Input.GetAxis("Mouse X") * rotationSpeed;
-        
-        transform.Rotate(Vector3.up, X, Space.Self);
        
-
+        transform.Rotate(Vector3.up, X, Space.Self);
+    
     }
 
 

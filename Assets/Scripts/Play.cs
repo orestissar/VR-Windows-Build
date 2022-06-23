@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-
+using UnityEngine.UI;
 
 public class Play : MonoBehaviour
 {
@@ -12,11 +12,11 @@ public class Play : MonoBehaviour
     int play = 0;
 
     public GameObject clickPlay;
-
+   
 
     private void Start()
     {
-        count = Spawner.transform.childCount;       
+        count = Spawner.transform.childCount;              
     }
 
     void doPlay()
@@ -26,7 +26,6 @@ public class Play : MonoBehaviour
 
     void doPause()
     {
-
         cur_animation.GetComponent<PlayableDirector>().enabled = false;
     }
 
@@ -47,18 +46,20 @@ public class Play : MonoBehaviour
         {
             doPause();
             clickPlay.SetActive(true);
+            gameObject.GetComponent<Image>().enabled = false;
         }
         if (play % 2 == 0)
         {
             doPlay();
             clickPlay.SetActive(false);
+            gameObject.GetComponent<Image>().enabled = true;
         }
     }
 
     public void resetPause()
     {
-        clickPlay.SetActive(false);
-        play = 0;
+        play = 1;
+        PlayPause();
     }
 
 

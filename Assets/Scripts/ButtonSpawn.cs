@@ -13,6 +13,8 @@ public class ButtonSpawn : MonoBehaviour
     int play = 0;
     float speed;
 
+   
+
     int showav = 0;
     List<GameObject> resetIcons;
 
@@ -30,15 +32,8 @@ public class ButtonSpawn : MonoBehaviour
         }
         animation.SetActive(true);
         animation.GetComponent<PlayableDirector>().enabled = true;
-        //Debug.Log(animation.transform.GetChild(0).name);
-        //
-        //foreach (GameObject reset in GameObject.FindGameObjectsWithTag("ResetIcon"))
-        //{
-        //    Debug.Log(reset.name);
-        //    reset.SetActive(false);            
-        //}
-
-
+        
+        
     }
 
 
